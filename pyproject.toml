@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sacred-sound"
+version = "0.1.0"
+description = "Simple acoustic comparison of three vocal recordings"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "librosa>=0.11", "soundfile>=0.12", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools]
+py-modules = ["analyze_audio"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
